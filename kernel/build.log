@@ -1,0 +1,6 @@
+clang++  -O2 -Wall -g --target=x86_64-elf -ffreestanding -mno-red-zone -fno-exceptions -fno-rtti -std=c++17 -c main.cpp
+main.cpp:1:10: fatal error: 'cstdint' file not found
+#include <cstdint>
+         ^~~~~~~~~
+1 error generated.
+make: *** [Makefile:20: main.o] Error 1
