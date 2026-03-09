@@ -26,6 +26,7 @@ class Error{
             kInvalidPhase,
             kUnknownXHCISpeedID,
             kNoWaiter,
+            kNoPCIMSI,
             kLastOfCode,  // この列挙子は常に最後に配置する
         };
 
@@ -51,6 +52,7 @@ class Error{
             "kInvalidPhase",
             "kUnknownXHCISpeedID",
             "kNoWaiter",
+            "kNoPCIMSI",
         };
         static_assert(Error::Code::kLastOfCode == code_names_.size());
 
@@ -68,6 +70,7 @@ class Error{
         const char* Name() const {
             return code_names_[static_cast<int>(this->code_)];
         }
+        
         const char* File() const{
             return this->file_;
         }
